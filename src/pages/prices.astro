@@ -1,0 +1,182 @@
+---
+import '../styles/site.css';
+const nav = [
+  { label: 'Home',        href: '/2429' },
+  { label: 'Kennels',     href: '/2429/kennels' },
+  { label: 'Cattery',     href: '/2429/cattery' },
+  { label: 'Pets at Home',href: '/2429/pet-sitting' },
+  { label: 'Livery Yard', href: '/2429/livery' },
+  { label: 'Rehoming',    href: '/2429/rehoming' },
+  { label: 'Prices',      href: '/2429/prices' },
+  { label: 'Gallery',     href: '/2429/gallery' },
+  { label: 'Contact',     href: '/2429/contact' },
+];
+const img = (f: string) => `/2429/images/${f}`;
+---
+
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Boarding Prices | Reed House Kennels, Warrington</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="preload" href="/2429/fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/2429/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  </head>
+  <body class="bg-brand-bg">
+
+    <div class="bg-brand-primary text-white py-2.5 px-4 text-center text-sm sticky top-0 z-50">
+      <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4">
+        <span>Preview redesign for <strong>Reed House Kennels</strong> by <strong>Biscuit Web</strong></span>
+        <a href="https://biscuitweb.co.uk/activate?id=2429&name=Reed%20House%20Kennels" class="inline-flex items-center px-4 py-1 bg-brand-accent text-brand-primary font-bold text-xs rounded-full hover:opacity-80 transition-opacity shrink-0">Like it? Activate for &pound;50</a>
+      </div>
+    </div>
+
+    <header class="bg-white border-b border-border sticky top-10 z-40">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 py-3 flex items-center justify-between">
+        <a href="/2429" class="font-display font-extrabold text-lg text-brand-primary leading-tight">Reed House<span class="text-brand-accent"> Kennels</span></a>
+        <button class="lg:hidden p-2 text-ink-soft" onclick="document.getElementById('mobile-nav-prices').classList.toggle('hidden')" aria-label="Menu">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+        <nav class="hidden lg:flex items-center gap-5">
+          {nav.map(n => (
+            <a href={n.href} class={`text-sm font-semibold transition-colors ${n.href === '/2429/prices' ? 'text-brand-primary' : 'text-ink-soft hover:text-brand-primary'}`}>{n.label}</a>
+          ))}
+          <a href="tel:01619415699" class="inline-flex items-center px-4 py-2 bg-brand-primary text-white font-display font-bold text-sm rounded-lg hover:opacity-90 transition-opacity">0161 941 5699</a>
+        </nav>
+      </div>
+      <nav id="mobile-nav-prices" class="hidden lg:hidden px-4 pb-4 space-y-2 bg-white border-t border-border">
+        {nav.map(n => (
+          <a href={n.href} class="text-ink-soft block text-sm font-semibold hover:text-brand-primary py-1">{n.label}</a>
+        ))}
+        <a href="tel:01619415699" class="block px-4 py-2.5 bg-brand-primary text-white font-display font-bold text-sm rounded-lg text-center">0161 941 5699</a>
+      </nav>
+    </header>
+
+    <!-- Page header -->
+    <section class="bg-brand-primary py-16 sm:py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <p class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-semibold mb-6 bg-white/20 text-white backdrop-blur-sm">📍 Lymm, Warrington, Cheshire</p>
+        <h1 class="font-display font-extrabold text-3xl sm:text-5xl lg:text-6xl text-white leading-tight">Our Prices</h1>
+        <p class="mt-4 text-lg text-white/90 max-w-xl">Below is our current price structure. For any queries, call us on <a href="tel:01619415699" class="underline">0161 941 5699</a> or email <a href="mailto:info@reedhousekennels.co.uk" class="underline">info@reedhousekennels.co.uk</a>.</p>
+      </div>
+    </section>
+
+    <!-- Prices -->
+    <section class="py-16 sm:py-20 bg-white">
+      <div class="mx-auto max-w-5xl px-4 sm:px-6">
+
+        <!-- Dogs -->
+        <div class="mb-12">
+          <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-ink mb-6 flex items-center gap-3">🐕 Dogs</h2>
+          <div class="bg-brand-bg rounded-2xl border border-border overflow-hidden">
+            <div class="flex items-center justify-between p-6 border-b border-border">
+              <span class="font-semibold text-ink">All dogs</span>
+              <span class="font-display font-extrabold text-2xl text-brand-primary">£19.00 <span class="text-sm font-normal text-ink-soft">per day</span></span>
+            </div>
+            <div class="p-6 bg-brand-accent/10">
+              <p class="text-ink-soft text-sm">10% discount if there are 2 dogs from the same family sharing a kennel.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cats -->
+        <div class="mb-12">
+          <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-ink mb-6 flex items-center gap-3">🐱 Cats</h2>
+          <div class="bg-brand-bg rounded-2xl border border-border overflow-hidden">
+            <div class="flex items-center justify-between p-6 border-b border-border">
+              <span class="font-semibold text-ink">1 cat / single pen</span>
+              <span class="font-display font-extrabold text-2xl text-brand-primary">£11.00 <span class="text-sm font-normal text-ink-soft">per day</span></span>
+            </div>
+            <div class="p-6 bg-brand-accent/10">
+              <p class="text-ink-soft text-sm">10% discount if there are 2 cats from the same family sharing.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Other pets -->
+        <div class="mb-12">
+          <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-ink mb-6 flex items-center gap-3">🐾 Other pets</h2>
+          <div class="bg-brand-bg rounded-2xl border border-border overflow-hidden divide-y divide-border">
+            <div class="flex items-center justify-between p-5">
+              <span class="font-semibold text-ink">Guinea pigs</span>
+              <span class="font-display font-bold text-xl text-brand-primary">£5.00 <span class="text-sm font-normal text-ink-soft">per day</span></span>
+            </div>
+            <div class="flex items-center justify-between p-5">
+              <span class="font-semibold text-ink">Birds</span>
+              <span class="font-display font-bold text-xl text-brand-primary">£6.00 <span class="text-sm font-normal text-ink-soft">per day</span></span>
+            </div>
+            <div class="flex items-center justify-between p-5">
+              <span class="font-semibold text-ink">Reptiles</span>
+              <span class="font-display font-bold text-xl text-brand-primary">£6.00 <span class="text-sm font-normal text-ink-soft">per day</span></span>
+            </div>
+          </div>
+          <p class="text-ink-soft text-sm mt-4">We realise that some people may have multiple animals. Please call us for a personalised quote.</p>
+        </div>
+
+        <!-- Additional info -->
+        <div class="bg-brand-primary/5 rounded-2xl p-6 border border-brand-primary/20">
+          <h3 class="font-display font-bold text-xl text-ink mb-4">Additional pricing information</h3>
+          <ul class="space-y-3">
+            <li class="flex gap-3 text-ink-soft text-sm"><span class="text-brand-primary font-bold shrink-0">›</span>Guests staying longer than 28 days will be given a 10% discount.</li>
+            <li class="flex gap-3 text-ink-soft text-sm"><span class="text-brand-primary font-bold shrink-0">›</span>Double rates apply for Christmas Day, Boxing Day and New Year's Day. All other bank holidays are charged at the normal daily rate.</li>
+            <li class="flex gap-3 text-ink-soft text-sm"><span class="text-brand-primary font-bold shrink-0">›</span>If a pet is collected before 11.00am on the day of departure, no charge will be made for that day.</li>
+            <li class="flex gap-3 text-ink-soft text-sm"><span class="text-brand-primary font-bold shrink-0">›</span>We accept cash, credit and debit cards. We do not take cheques.</li>
+            <li class="flex gap-3 text-ink-soft text-sm"><span class="text-brand-primary font-bold shrink-0">›</span>Any pets on a prescribed veterinary diet will be fed according to requirements. We suggest that you supply the diet or we reserve the right to charge for any extra costs involved.</li>
+            <li class="flex gap-3 text-ink-soft text-sm"><span class="text-brand-primary font-bold shrink-0">›</span>All medication requirements will be fully complied with, free of charge, unless this means veterinary support or off-premises treatment.</li>
+          </ul>
+          <p class="text-ink-soft text-sm mt-4">For more information please refer to our <a href="/2429/terms" class="text-brand-primary underline">Terms and Conditions</a> or call <a href="tel:01619415699" class="text-brand-primary underline">0161 941 5699</a> to speak to one of our experienced staff.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-ink text-white py-12">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          <div>
+            <p class="font-display font-extrabold text-xl mb-2">Reed House Kennels</p>
+            <p class="text-white/60 text-sm">Reed House Farm<br />Gorsey Lane, Warburton, Lymm<br />Cheshire WA13 9UB</p>
+            <p class="text-white/60 text-sm mt-3"><a href="tel:01619415699" class="hover:text-white transition-colors">0161 941 5699</a></p>
+            <p class="text-white/60 text-sm"><a href="mailto:info@reedhousekennels.co.uk" class="hover:text-white transition-colors">info@reedhousekennels.co.uk</a></p>
+          </div>
+          <div>
+            <p class="font-display font-bold mb-3 text-white/80">Services</p>
+            <ul class="space-y-1.5">
+              <li><a href="/2429/kennels" class="text-white/60 text-sm hover:text-white">Kennels</a></li>
+              <li><a href="/2429/cattery" class="text-white/60 text-sm hover:text-white">Cattery</a></li>
+              <li><a href="/2429/pet-sitting" class="text-white/60 text-sm hover:text-white">Pets Stay at Home</a></li>
+              <li><a href="/2429/livery" class="text-white/60 text-sm hover:text-white">Livery Yard</a></li>
+              <li><a href="/2429/rehoming" class="text-white/60 text-sm hover:text-white">Rehoming</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="font-display font-bold mb-3 text-white/80">Information</p>
+            <ul class="space-y-1.5">
+              <li><a href="/2429/prices" class="text-white/60 text-sm hover:text-white">Prices</a></li>
+              <li><a href="/2429/gallery" class="text-white/60 text-sm hover:text-white">Gallery</a></li>
+              <li><a href="/2429/team" class="text-white/60 text-sm hover:text-white">Our Team</a></li>
+              <li><a href="/2429/faq" class="text-white/60 text-sm hover:text-white">FAQ</a></li>
+              <li><a href="/2429/testimonials" class="text-white/60 text-sm hover:text-white">Testimonials</a></li>
+              <li><a href="/2429/contact" class="text-white/60 text-sm hover:text-white">Contact Us</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="font-display font-bold mb-3 text-white/80">More</p>
+            <ul class="space-y-1.5">
+              <li><a href="/2429/dogs-and-litters" class="text-white/60 text-sm hover:text-white">Our Dogs &amp; Litters</a></li>
+              <li><a href="/2429/terms" class="text-white/60 text-sm hover:text-white">Terms &amp; Conditions</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p class="text-white/40 text-xs">&copy; 2025 Reed House Kennels. All rights reserved.</p>
+          <p class="text-white/30 text-xs">Preview redesign by <a href="https://biscuitweb.co.uk" class="hover:text-white/60">Biscuit Web</a></p>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>

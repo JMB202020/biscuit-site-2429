@@ -1,0 +1,170 @@
+---
+import '../styles/site.css';
+const nav = [
+  { label: 'Home',        href: '/2429' },
+  { label: 'Kennels',     href: '/2429/kennels' },
+  { label: 'Cattery',     href: '/2429/cattery' },
+  { label: 'Pets at Home',href: '/2429/pet-sitting' },
+  { label: 'Livery Yard', href: '/2429/livery' },
+  { label: 'Rehoming',    href: '/2429/rehoming' },
+  { label: 'Prices',      href: '/2429/prices' },
+  { label: 'Gallery',     href: '/2429/gallery' },
+  { label: 'Contact',     href: '/2429/contact' },
+];
+const img = (f: string) => `/2429/images/${f}`;
+---
+
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Livery Yard, Stables &amp; Arena | Reed House Farm, Warrington</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="preload" href="/2429/fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/2429/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  </head>
+  <body class="bg-brand-bg">
+
+    <div class="bg-brand-primary text-white py-2.5 px-4 text-center text-sm sticky top-0 z-50">
+      <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4">
+        <span>Preview redesign for <strong>Reed House Kennels</strong> by <strong>Biscuit Web</strong></span>
+        <a href="https://biscuitweb.co.uk/activate?id=2429&name=Reed%20House%20Kennels" class="inline-flex items-center px-4 py-1 bg-brand-accent text-brand-primary font-bold text-xs rounded-full hover:opacity-80 transition-opacity shrink-0">Like it? Activate for &pound;50</a>
+      </div>
+    </div>
+
+    <header class="bg-white border-b border-border sticky top-10 z-40">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 py-3 flex items-center justify-between">
+        <a href="/2429" class="font-display font-extrabold text-lg text-brand-primary leading-tight">Reed House<span class="text-brand-accent"> Kennels</span></a>
+        <button class="lg:hidden p-2 text-ink-soft" onclick="document.getElementById('mobile-nav-livery').classList.toggle('hidden')" aria-label="Menu">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+        <nav class="hidden lg:flex items-center gap-5">
+          {nav.map(n => (
+            <a href={n.href} class={`text-sm font-semibold transition-colors ${n.href === '/2429/livery' ? 'text-brand-primary' : 'text-ink-soft hover:text-brand-primary'}`}>{n.label}</a>
+          ))}
+          <a href="tel:01619415699" class="inline-flex items-center px-4 py-2 bg-brand-primary text-white font-display font-bold text-sm rounded-lg hover:opacity-90 transition-opacity">0161 941 5699</a>
+        </nav>
+      </div>
+      <nav id="mobile-nav-livery" class="hidden lg:hidden px-4 pb-4 space-y-2 bg-white border-t border-border">
+        {nav.map(n => (
+          <a href={n.href} class="text-ink-soft block text-sm font-semibold hover:text-brand-primary py-1">{n.label}</a>
+        ))}
+        <a href="tel:01619415699" class="block px-4 py-2.5 bg-brand-primary text-white font-display font-bold text-sm rounded-lg text-center">0161 941 5699</a>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="relative min-h-[60vh] sm:min-h-[80vh] overflow-hidden flex items-center">
+      <img src={img('livery-image.jpg')} alt="Livery yard and stables at Reed House Farm" class="absolute inset-0 w-full h-full object-cover" fetchpriority="high" />
+      <div class="absolute inset-0 bg-black/70"></div>
+      <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 py-16">
+        <p class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-semibold mb-6 bg-white/20 text-white backdrop-blur-sm">📍 Cheshire countryside, between Altrincham and Lymm</p>
+        <h1 class="font-display font-extrabold text-3xl sm:text-5xl lg:text-6xl text-white leading-tight max-w-2xl">Livery Yard, Stables &amp; Arena</h1>
+        <p class="mt-4 text-lg text-white/90 max-w-xl">Outstanding equestrian facilities in the heart of the Cheshire countryside. A friendly, family-run yard with everything your horse needs.</p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="tel:01619415699" class="inline-flex items-center px-6 py-3 bg-brand-accent text-brand-primary font-display font-bold text-base rounded-xl hover:opacity-90">Enquire: 0161 941 5699</a>
+          <a href="/2429/contact" class="inline-flex items-center px-6 py-3 border-2 border-white text-white font-display font-bold text-base rounded-xl hover:bg-white/10">Waiting list</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content -->
+    <section class="py-16 sm:py-20 bg-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="grid lg:grid-cols-3 gap-12">
+          <div class="lg:col-span-2">
+            <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-ink mb-6">About our livery yard</h2>
+            <p class="text-ink-soft mb-4">Reed House livery yard is a friendly, family-run yard ideally located in the heart of the Cheshire countryside between Altrincham and Lymm. We are extremely proud of our equestrian facilities and work hard to maintain excellent standards.</p>
+            <p class="text-ink-soft mb-8">We have a variety of stables suitable for Shetland ponies to large hunters, all with automatic water drinkers. We offer DIY, Part or Full Livery, with additional services as and when you require. All of our staff are either horse owners, or they have over ten years' experience of handling and working with horses.</p>
+
+            <h3 class="font-display font-bold text-xl text-ink mb-4">What we offer</h3>
+            <ul class="space-y-3 mb-8">
+              <li class="flex gap-3 text-ink-soft"><span class="text-brand-primary font-bold shrink-0 mt-0.5">›</span>Large roomy stables with automatic water drinkers</li>
+              <li class="flex gap-3 text-ink-soft"><span class="text-brand-primary font-bold shrink-0 mt-0.5">›</span>Secure tack rooms</li>
+              <li class="flex gap-3 text-ink-soft"><span class="text-brand-primary font-bold shrink-0 mt-0.5">›</span>Two large outdoor floodlit arenas, one with training mirrors</li>
+              <li class="flex gap-3 text-ink-soft"><span class="text-brand-primary font-bold shrink-0 mt-0.5">›</span>All-year round turnout with mares and geldings separate</li>
+              <li class="flex gap-3 text-ink-soft"><span class="text-brand-primary font-bold shrink-0 mt-0.5">›</span>Option of 24-hour grazing during the summer months</li>
+              <li class="flex gap-3 text-ink-soft"><span class="text-brand-primary font-bold shrink-0 mt-0.5">›</span>Post and rail fencing or natural hedgerows</li>
+              <li class="flex gap-3 text-ink-soft"><span class="text-brand-primary font-bold shrink-0 mt-0.5">›</span>Full set of show jumps, in the field during summer and available for the arena in winter</li>
+              <li class="flex gap-3 text-ink-soft"><span class="text-brand-primary font-bold shrink-0 mt-0.5">›</span>New range of cross country jumps ranging from 75cm to 1 metre</li>
+              <li class="flex gap-3 text-ink-soft"><span class="text-brand-primary font-bold shrink-0 mt-0.5">›</span>Homemade hay and haylage</li>
+              <li class="flex gap-3 text-ink-soft"><span class="text-brand-primary font-bold shrink-0 mt-0.5">›</span>Choice of bedding including straw, shavings or bliss (a biodegradable dust-extracted bedding, ideal for horses with respiratory problems)</li>
+              <li class="flex gap-3 text-ink-soft"><span class="text-brand-primary font-bold shrink-0 mt-0.5">›</span>Close to the Trans Pennine Trail, giving access to plenty of off-road hacking</li>
+            </ul>
+
+            <div class="rounded-2xl overflow-hidden">
+              <img src={img('livery.jpg')} alt="Horses at Reed House livery yard" class="w-full object-cover" loading="lazy" width="250" height="480" />
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <div class="space-y-6">
+            <div class="bg-brand-primary text-white rounded-2xl p-6">
+              <h3 class="font-display font-bold text-xl mb-3">Stable availability</h3>
+              <p class="text-white/80 text-sm mb-4">Stables may occasionally become available. Please call us or use our contact form to be added to our waiting list.</p>
+              <a href="tel:01619415699" class="block text-center px-4 py-2.5 bg-brand-accent text-brand-primary font-display font-bold text-sm rounded-lg hover:opacity-90 transition-opacity mb-2">0161 941 5699</a>
+              <a href="/2429/contact" class="block text-center px-4 py-2.5 border border-white text-white font-semibold text-sm rounded-lg hover:bg-white/10 transition-all">Contact form</a>
+            </div>
+            <div class="bg-brand-bg rounded-2xl p-6 border border-border">
+              <h3 class="font-display font-bold text-lg text-ink mb-3">Livery options</h3>
+              <ul class="space-y-2 text-ink-soft text-sm">
+                <li class="flex items-start gap-2"><span class="text-brand-accent font-bold">✓</span>DIY Livery</li>
+                <li class="flex items-start gap-2"><span class="text-brand-accent font-bold">✓</span>Part Livery</li>
+                <li class="flex items-start gap-2"><span class="text-brand-accent font-bold">✓</span>Full Livery</li>
+              </ul>
+              <p class="text-ink-soft text-sm mt-3">Additional services available as and when required. Call us to discuss your needs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-ink text-white py-12">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          <div>
+            <p class="font-display font-extrabold text-xl mb-2">Reed House Kennels</p>
+            <p class="text-white/60 text-sm">Reed House Farm<br />Gorsey Lane, Warburton, Lymm<br />Cheshire WA13 9UB</p>
+            <p class="text-white/60 text-sm mt-3"><a href="tel:01619415699" class="hover:text-white">0161 941 5699</a></p>
+            <p class="text-white/60 text-sm"><a href="mailto:info@reedhousekennels.co.uk" class="hover:text-white">info@reedhousekennels.co.uk</a></p>
+          </div>
+          <div>
+            <p class="font-display font-bold mb-3 text-white/80">Services</p>
+            <ul class="space-y-1.5">
+              <li><a href="/2429/kennels" class="text-white/60 text-sm hover:text-white">Kennels</a></li>
+              <li><a href="/2429/cattery" class="text-white/60 text-sm hover:text-white">Cattery</a></li>
+              <li><a href="/2429/pet-sitting" class="text-white/60 text-sm hover:text-white">Pets Stay at Home</a></li>
+              <li><a href="/2429/livery" class="text-white/60 text-sm hover:text-white">Livery Yard</a></li>
+              <li><a href="/2429/rehoming" class="text-white/60 text-sm hover:text-white">Rehoming</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="font-display font-bold mb-3 text-white/80">Information</p>
+            <ul class="space-y-1.5">
+              <li><a href="/2429/prices" class="text-white/60 text-sm hover:text-white">Prices</a></li>
+              <li><a href="/2429/gallery" class="text-white/60 text-sm hover:text-white">Gallery</a></li>
+              <li><a href="/2429/team" class="text-white/60 text-sm hover:text-white">Our Team</a></li>
+              <li><a href="/2429/faq" class="text-white/60 text-sm hover:text-white">FAQ</a></li>
+              <li><a href="/2429/testimonials" class="text-white/60 text-sm hover:text-white">Testimonials</a></li>
+              <li><a href="/2429/contact" class="text-white/60 text-sm hover:text-white">Contact Us</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="font-display font-bold mb-3 text-white/80">More</p>
+            <ul class="space-y-1.5">
+              <li><a href="/2429/dogs-and-litters" class="text-white/60 text-sm hover:text-white">Our Dogs &amp; Litters</a></li>
+              <li><a href="/2429/terms" class="text-white/60 text-sm hover:text-white">Terms &amp; Conditions</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p class="text-white/40 text-xs">&copy; 2025 Reed House Kennels. All rights reserved.</p>
+          <p class="text-white/30 text-xs">Preview redesign by <a href="https://biscuitweb.co.uk" class="hover:text-white/60">Biscuit Web</a></p>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>

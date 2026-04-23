@@ -1,0 +1,211 @@
+---
+import '../styles/site.css';
+const nav = [
+  { label: 'Home',        href: '/2429' },
+  { label: 'Kennels',     href: '/2429/kennels' },
+  { label: 'Cattery',     href: '/2429/cattery' },
+  { label: 'Pets at Home',href: '/2429/pet-sitting' },
+  { label: 'Livery Yard', href: '/2429/livery' },
+  { label: 'Rehoming',    href: '/2429/rehoming' },
+  { label: 'Prices',      href: '/2429/prices' },
+  { label: 'Gallery',     href: '/2429/gallery' },
+  { label: 'Contact',     href: '/2429/contact' },
+];
+---
+
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact Us | Reed House Kennels, Warrington</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="preload" href="/2429/fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/2429/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  </head>
+  <body class="bg-brand-bg">
+
+    <div class="bg-brand-primary text-white py-2.5 px-4 text-center text-sm sticky top-0 z-50">
+      <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4">
+        <span>Preview redesign for <strong>Reed House Kennels</strong> by <strong>Biscuit Web</strong></span>
+        <a href="https://biscuitweb.co.uk/activate?id=2429&name=Reed%20House%20Kennels" class="inline-flex items-center px-4 py-1 bg-brand-accent text-brand-primary font-bold text-xs rounded-full hover:opacity-80 transition-opacity shrink-0">Like it? Activate for &pound;50</a>
+      </div>
+    </div>
+
+    <header class="bg-white border-b border-border sticky top-10 z-40">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 py-3 flex items-center justify-between">
+        <a href="/2429" class="font-display font-extrabold text-lg text-brand-primary leading-tight">Reed House<span class="text-brand-accent"> Kennels</span></a>
+        <button class="lg:hidden p-2 text-ink-soft" onclick="document.getElementById('mobile-nav-contact').classList.toggle('hidden')" aria-label="Menu">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+        <nav class="hidden lg:flex items-center gap-5">
+          {nav.map(n => (
+            <a href={n.href} class={`text-sm font-semibold transition-colors ${n.href === '/2429/contact' ? 'text-brand-primary' : 'text-ink-soft hover:text-brand-primary'}`}>{n.label}</a>
+          ))}
+          <a href="tel:01619415699" class="inline-flex items-center px-4 py-2 bg-brand-primary text-white font-display font-bold text-sm rounded-lg hover:opacity-90 transition-opacity">0161 941 5699</a>
+        </nav>
+      </div>
+      <nav id="mobile-nav-contact" class="hidden lg:hidden px-4 pb-4 space-y-2 bg-white border-t border-border">
+        {nav.map(n => (
+          <a href={n.href} class="text-ink-soft block text-sm font-semibold hover:text-brand-primary py-1">{n.label}</a>
+        ))}
+        <a href="tel:01619415699" class="block px-4 py-2.5 bg-brand-primary text-white font-display font-bold text-sm rounded-lg text-center">0161 941 5699</a>
+      </nav>
+    </header>
+
+    <!-- Page header -->
+    <section class="bg-brand-primary py-16 sm:py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <h1 class="font-display font-extrabold text-3xl sm:text-5xl lg:text-6xl text-white">Get in Touch</h1>
+        <p class="mt-4 text-white/80 text-lg max-w-xl">If you can't reach us by telephone, the quickest way to get more information is to email us. We will respond either by telephone or email by return.</p>
+      </div>
+    </section>
+
+    <!-- Contact content -->
+    <section class="py-16 sm:py-20 bg-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="grid lg:grid-cols-3 gap-12">
+
+          <!-- Contact details -->
+          <div class="lg:col-span-2 space-y-8">
+
+            <div class="bg-brand-bg rounded-2xl p-8 border border-border">
+              <h2 class="font-display font-extrabold text-2xl text-ink mb-6">Bookings and enquiries</h2>
+              <p class="text-ink-soft mb-6">When emailing us to check if we have a vacancy or to make a booking for your pet, please be sure to enter the inclusive dates that you require. We will reply and confirm either by email or telephone. Please indicate the times when you are available if you'd like us to call you.</p>
+              <div class="grid sm:grid-cols-2 gap-4">
+                <a href="tel:01619415699" class="flex items-center gap-3 p-4 bg-brand-primary text-white rounded-xl hover:opacity-90 transition-all">
+                  <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.79a19.79 19.79 0 01-3.07-8.68A2 2 0 012 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                  <div>
+                    <p class="font-display font-bold">0161 941 5699</p>
+                    <p class="text-white/70 text-xs">Main line</p>
+                  </div>
+                </a>
+                <a href="tel:07876036118" class="flex items-center gap-3 p-4 bg-brand-bg border border-border text-ink rounded-xl hover:border-brand-primary transition-all">
+                  <svg class="w-5 h-5 shrink-0 text-brand-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.79a19.79 19.79 0 01-3.07-8.68A2 2 0 012 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                  <div>
+                    <p class="font-display font-bold text-ink">07876 036118</p>
+                    <p class="text-ink-soft text-xs">Texts welcome too</p>
+                  </div>
+                </a>
+              </div>
+              <a href="mailto:info@reedhousekennels.co.uk" class="mt-4 flex items-center gap-3 p-4 bg-brand-bg border border-border text-ink rounded-xl hover:border-brand-primary transition-all">
+                <svg class="w-5 h-5 shrink-0 text-brand-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <div>
+                  <p class="font-display font-bold text-ink">info@reedhousekennels.co.uk</p>
+                  <p class="text-ink-soft text-xs">We reply by return</p>
+                </div>
+              </a>
+            </div>
+
+            <!-- Opening hours -->
+            <div class="bg-brand-bg rounded-2xl p-8 border border-border">
+              <h2 class="font-display font-extrabold text-2xl text-ink mb-2">Standard opening times</h2>
+              <p class="text-ink-soft text-sm mb-4">These hours apply throughout the year, including bank holidays (except Christmas Day, Boxing Day and New Year's Day when reception is closed).</p>
+              <div class="space-y-3">
+                <div class="flex justify-between items-center py-2 border-b border-border">
+                  <span class="font-semibold text-ink">Monday to Friday</span>
+                  <span class="text-ink-soft text-sm">9.00am to 11.00am &amp; 2.00pm to 6.00pm</span>
+                </div>
+                <div class="flex justify-between items-center py-2 border-b border-border">
+                  <span class="font-semibold text-ink">Saturday</span>
+                  <span class="text-ink-soft text-sm">9.00am to 4.00pm</span>
+                </div>
+                <div class="flex justify-between items-center py-2">
+                  <span class="font-semibold text-ink">Sunday</span>
+                  <span class="text-ink-soft text-sm">10.00am to 4.00pm</span>
+                </div>
+              </div>
+              <p class="text-ink-soft text-sm mt-4 bg-brand-accent/20 rounded-lg p-3">During Christmas we are still here looking after your pets, but reception is closed. We do have a half-hour window at 11am to 11.30am on Boxing Day when we accept pets for the holiday season. Please call for details.</p>
+            </div>
+
+            <!-- Map -->
+            <div class="bg-brand-bg rounded-2xl p-8 border border-border">
+              <h2 class="font-display font-extrabold text-2xl text-ink mb-4">How to find us</h2>
+              <p class="text-ink-soft mb-6">We are easy to find. Reed House Farm, Gorsey Lane, Warburton, Lymm, Cheshire WA13 9UB.</p>
+              <div class="rounded-xl overflow-hidden">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d636.1216521857033!2d-2.416123000000041!3d53.40118300041846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487b0346cd8bafcd%3A0x685da57c3412ace3!2sReed+House+Kennels!5e1!3m2!1sen!2suk!4v1410262755809"
+                  width="100%"
+                  height="350"
+                  style="border:0;"
+                  allowfullscreen
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  title="Reed House Kennels on Google Maps"
+                ></iframe>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Sidebar -->
+          <div class="space-y-6">
+            <div class="bg-brand-primary text-white rounded-2xl p-6">
+              <h3 class="font-display font-bold text-xl mb-3">Address</h3>
+              <address class="text-white/80 not-italic text-sm leading-relaxed">
+                Reed House Farm<br />
+                Gorsey Lane, Warburton<br />
+                Lymm, Cheshire WA13 9UB
+              </address>
+            </div>
+            <div class="bg-brand-bg rounded-2xl p-6 border border-border">
+              <h3 class="font-display font-bold text-lg text-ink mb-3">Quick links</h3>
+              <ul class="space-y-2">
+                <li><a href="/2429/prices" class="text-brand-primary text-sm font-semibold hover:underline">View our prices</a></li>
+                <li><a href="/2429/faq" class="text-brand-primary text-sm font-semibold hover:underline">Read our FAQs</a></li>
+                <li><a href="/2429/terms" class="text-brand-primary text-sm font-semibold hover:underline">Terms &amp; Conditions</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-ink text-white py-12">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          <div>
+            <p class="font-display font-extrabold text-xl mb-2">Reed House Kennels</p>
+            <p class="text-white/60 text-sm">Reed House Farm<br />Gorsey Lane, Warburton, Lymm<br />Cheshire WA13 9UB</p>
+            <p class="text-white/60 text-sm mt-3"><a href="tel:01619415699" class="hover:text-white">0161 941 5699</a></p>
+            <p class="text-white/60 text-sm"><a href="mailto:info@reedhousekennels.co.uk" class="hover:text-white">info@reedhousekennels.co.uk</a></p>
+          </div>
+          <div>
+            <p class="font-display font-bold mb-3 text-white/80">Services</p>
+            <ul class="space-y-1.5">
+              <li><a href="/2429/kennels" class="text-white/60 text-sm hover:text-white">Kennels</a></li>
+              <li><a href="/2429/cattery" class="text-white/60 text-sm hover:text-white">Cattery</a></li>
+              <li><a href="/2429/pet-sitting" class="text-white/60 text-sm hover:text-white">Pets Stay at Home</a></li>
+              <li><a href="/2429/livery" class="text-white/60 text-sm hover:text-white">Livery Yard</a></li>
+              <li><a href="/2429/rehoming" class="text-white/60 text-sm hover:text-white">Rehoming</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="font-display font-bold mb-3 text-white/80">Information</p>
+            <ul class="space-y-1.5">
+              <li><a href="/2429/prices" class="text-white/60 text-sm hover:text-white">Prices</a></li>
+              <li><a href="/2429/gallery" class="text-white/60 text-sm hover:text-white">Gallery</a></li>
+              <li><a href="/2429/team" class="text-white/60 text-sm hover:text-white">Our Team</a></li>
+              <li><a href="/2429/faq" class="text-white/60 text-sm hover:text-white">FAQ</a></li>
+              <li><a href="/2429/testimonials" class="text-white/60 text-sm hover:text-white">Testimonials</a></li>
+              <li><a href="/2429/contact" class="text-white/60 text-sm hover:text-white">Contact Us</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="font-display font-bold mb-3 text-white/80">More</p>
+            <ul class="space-y-1.5">
+              <li><a href="/2429/dogs-and-litters" class="text-white/60 text-sm hover:text-white">Our Dogs &amp; Litters</a></li>
+              <li><a href="/2429/terms" class="text-white/60 text-sm hover:text-white">Terms &amp; Conditions</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p class="text-white/40 text-xs">&copy; 2025 Reed House Kennels. All rights reserved.</p>
+          <p class="text-white/30 text-xs">Preview redesign by <a href="https://biscuitweb.co.uk" class="hover:text-white/60">Biscuit Web</a></p>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>

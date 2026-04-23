@@ -1,0 +1,163 @@
+---
+import '../styles/site.css';
+const nav = [
+  { label: 'Home',        href: '/2429' },
+  { label: 'Kennels',     href: '/2429/kennels' },
+  { label: 'Cattery',     href: '/2429/cattery' },
+  { label: 'Pets at Home',href: '/2429/pet-sitting' },
+  { label: 'Livery Yard', href: '/2429/livery' },
+  { label: 'Rehoming',    href: '/2429/rehoming' },
+  { label: 'Prices',      href: '/2429/prices' },
+  { label: 'Gallery',     href: '/2429/gallery' },
+  { label: 'Contact',     href: '/2429/contact' },
+];
+---
+
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Terms &amp; Conditions | Reed House Kennels, Warrington</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="preload" href="/2429/fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/2429/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  </head>
+  <body class="bg-brand-bg">
+
+    <div class="bg-brand-primary text-white py-2.5 px-4 text-center text-sm sticky top-0 z-50">
+      <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4">
+        <span>Preview redesign for <strong>Reed House Kennels</strong> by <strong>Biscuit Web</strong></span>
+        <a href="https://biscuitweb.co.uk/activate?id=2429&name=Reed%20House%20Kennels" class="inline-flex items-center px-4 py-1 bg-brand-accent text-brand-primary font-bold text-xs rounded-full hover:opacity-80 transition-opacity shrink-0">Like it? Activate for &pound;50</a>
+      </div>
+    </div>
+
+    <header class="bg-white border-b border-border sticky top-10 z-40">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 py-3 flex items-center justify-between">
+        <a href="/2429" class="font-display font-extrabold text-lg text-brand-primary leading-tight">Reed House<span class="text-brand-accent"> Kennels</span></a>
+        <button class="lg:hidden p-2 text-ink-soft" onclick="document.getElementById('mobile-nav-terms').classList.toggle('hidden')" aria-label="Menu">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+        <nav class="hidden lg:flex items-center gap-5">
+          {nav.map(n => (
+            <a href={n.href} class="text-sm font-semibold text-ink-soft hover:text-brand-primary transition-colors">{n.label}</a>
+          ))}
+          <a href="tel:01619415699" class="inline-flex items-center px-4 py-2 bg-brand-primary text-white font-display font-bold text-sm rounded-lg hover:opacity-90 transition-opacity">0161 941 5699</a>
+        </nav>
+      </div>
+      <nav id="mobile-nav-terms" class="hidden lg:hidden px-4 pb-4 space-y-2 bg-white border-t border-border">
+        {nav.map(n => (
+          <a href={n.href} class="text-ink-soft block text-sm font-semibold hover:text-brand-primary py-1">{n.label}</a>
+        ))}
+        <a href="tel:01619415699" class="block px-4 py-2.5 bg-brand-primary text-white font-display font-bold text-sm rounded-lg text-center">0161 941 5699</a>
+      </nav>
+    </header>
+
+    <!-- Page header -->
+    <section class="bg-brand-primary py-16 sm:py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <h1 class="font-display font-extrabold text-3xl sm:text-5xl lg:text-6xl text-white">Terms &amp; Conditions</h1>
+      </div>
+    </section>
+
+    <!-- Terms content -->
+    <section class="py-16 sm:py-20 bg-white">
+      <div class="mx-auto max-w-4xl px-4 sm:px-6 space-y-10">
+
+        <div class="bg-brand-bg rounded-2xl p-6 border border-border">
+          <h2 class="font-display font-bold text-xl text-ink mb-4">Inspection</h2>
+          <ul class="space-y-3">
+            <li class="flex gap-3 text-ink-soft text-sm"><span class="text-brand-primary font-bold shrink-0 mt-0.5">•</span>The kennels are licensed by Trafford Borough Council and are inspected by their appointed vet.</li>
+            <li class="flex gap-3 text-ink-soft text-sm"><span class="text-brand-primary font-bold shrink-0 mt-0.5">•</span>You are most welcome to visit the farm any day between 3pm and 5pm. We do not allow children into the kennels at any time.</li>
+          </ul>
+        </div>
+
+        <div class="bg-brand-bg rounded-2xl p-6 border border-border">
+          <h2 class="font-display font-bold text-xl text-ink mb-4">Charges and prices</h2>
+          <ul class="space-y-3">
+            <li class="flex gap-3 text-ink-soft text-sm"><span class="text-brand-primary font-bold shrink-0 mt-0.5">•</span>Our current charges are listed in reception and on our general information sheet.</li>
+            <li class="flex gap-3 text-ink-soft text-sm"><span class="text-brand-primary font-bold shrink-0 mt-0.5">•</span>Boarding prices are per day, whatever time your pet begins their stay. The price includes food, heating, fresh bedding and cuddles and exercise. Any animal boarding and collected by 11am on their last day will not be charged for that day. Any animal collected after 11am will be charged another day's boarding.</li>
+            <li class="flex gap-3 text-ink-soft text-sm"><span class="text-brand-primary font-bold shrink-0 mt-0.5">•</span>The daily charge is the same even if you provide your own food or bedding.</li>
+            <li class="flex gap-3 text-ink-soft text-sm"><span class="text-brand-primary font-bold shrink-0 mt-0.5">•</span>Although we appreciate that you may return early from your holidays for whatever reason, you will still be charged for the length of time you booked your stay with us.</li>
+            <li class="flex gap-3 text-ink-soft text-sm"><span class="text-brand-primary font-bold shrink-0 mt-0.5">•</span>Any deposit paid is non-returnable.</li>
+            <li class="flex gap-3 text-ink-soft text-sm"><span class="text-brand-primary font-bold shrink-0 mt-0.5">•</span>Payment is by way of cash or card on arrival or departure. Please note, we do not take cheques.</li>
+          </ul>
+        </div>
+
+        <div class="bg-brand-bg rounded-2xl p-6 border border-border">
+          <h2 class="font-display font-bold text-xl text-ink mb-4">Vaccinations and health</h2>
+          <ul class="space-y-3">
+            <li class="flex gap-3 text-ink-soft text-sm"><span class="text-brand-primary font-bold shrink-0 mt-0.5">•</span>All animals must be fully vaccinated before they arrive. For cats, this must include feline influenza and feline enteritis. For dogs, this must include hepatitis, leptospirosis, para influenza, parvovirus and canine distemper. We do recommend vaccinating against kennel cough, especially during the summer months.</li>
+            <li class="flex gap-3 text-ink-soft text-sm"><span class="text-brand-primary font-bold shrink-0 mt-0.5">•</span>Please bring your vaccination booklet. We will update your details on our computer.</li>
+            <li class="flex gap-3 text-ink-soft text-sm"><span class="text-brand-primary font-bold shrink-0 mt-0.5">•</span>We reserve the right to refuse any animal which, in our professional opinion, is unhealthy on arrival.</li>
+            <li class="flex gap-3 text-ink-soft text-sm"><span class="text-brand-primary font-bold shrink-0 mt-0.5">•</span>In the event of a pet becoming ill, a vet will be called where necessary. If treatment or surgery is recommended, every effort will be made to contact you to obtain consent. In the event that contact cannot be made, the customer agrees to accept the decision of the vet selected by Reed House. The owner will be responsible for all costs incurred.</li>
+            <li class="flex gap-3 text-ink-soft text-sm"><span class="text-brand-primary font-bold shrink-0 mt-0.5">•</span>Owners must provide full and accurate details of any medical problem, as no responsibility can be taken due to any undisclosed information.</li>
+          </ul>
+        </div>
+
+        <div class="bg-brand-bg rounded-2xl p-6 border border-border">
+          <h2 class="font-display font-bold text-xl text-ink mb-4">Abandoned animals</h2>
+          <ul class="space-y-3">
+            <li class="flex gap-3 text-ink-soft text-sm"><span class="text-brand-primary font-bold shrink-0 mt-0.5">•</span>In the event of an animal not being collected, or boarding fees not paid, we reserve the right to dispose of any animal not collected within 14 days of the date arranged if no communication is received from the owner or their representative.</li>
+            <li class="flex gap-3 text-ink-soft text-sm"><span class="text-brand-primary font-bold shrink-0 mt-0.5">•</span>Please see our <a href="/2429/rehoming" class="text-brand-primary underline">rehoming page</a> for pets looking for a loving home.</li>
+          </ul>
+        </div>
+
+        <div class="bg-brand-bg rounded-2xl p-6 border border-border">
+          <h2 class="font-display font-bold text-xl text-ink mb-4">Belongings</h2>
+          <ul class="space-y-3">
+            <li class="flex gap-3 text-ink-soft text-sm"><span class="text-brand-primary font-bold shrink-0 mt-0.5">•</span>Everything your pet requires for their stay at Reed House is provided. We have a plentiful supply of toys and bedding. If you want to bring toys, please do not bring anything precious or anything you would not want to lose. The kennels and the cattery are cleaned out daily and toys are easily mislaid.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-ink text-white py-12">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          <div>
+            <p class="font-display font-extrabold text-xl mb-2">Reed House Kennels</p>
+            <p class="text-white/60 text-sm">Reed House Farm<br />Gorsey Lane, Warburton, Lymm<br />Cheshire WA13 9UB</p>
+            <p class="text-white/60 text-sm mt-3"><a href="tel:01619415699" class="hover:text-white">0161 941 5699</a></p>
+            <p class="text-white/60 text-sm"><a href="mailto:info@reedhousekennels.co.uk" class="hover:text-white">info@reedhousekennels.co.uk</a></p>
+          </div>
+          <div>
+            <p class="font-display font-bold mb-3 text-white/80">Services</p>
+            <ul class="space-y-1.5">
+              <li><a href="/2429/kennels" class="text-white/60 text-sm hover:text-white">Kennels</a></li>
+              <li><a href="/2429/cattery" class="text-white/60 text-sm hover:text-white">Cattery</a></li>
+              <li><a href="/2429/pet-sitting" class="text-white/60 text-sm hover:text-white">Pets Stay at Home</a></li>
+              <li><a href="/2429/livery" class="text-white/60 text-sm hover:text-white">Livery Yard</a></li>
+              <li><a href="/2429/rehoming" class="text-white/60 text-sm hover:text-white">Rehoming</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="font-display font-bold mb-3 text-white/80">Information</p>
+            <ul class="space-y-1.5">
+              <li><a href="/2429/prices" class="text-white/60 text-sm hover:text-white">Prices</a></li>
+              <li><a href="/2429/gallery" class="text-white/60 text-sm hover:text-white">Gallery</a></li>
+              <li><a href="/2429/team" class="text-white/60 text-sm hover:text-white">Our Team</a></li>
+              <li><a href="/2429/faq" class="text-white/60 text-sm hover:text-white">FAQ</a></li>
+              <li><a href="/2429/testimonials" class="text-white/60 text-sm hover:text-white">Testimonials</a></li>
+              <li><a href="/2429/contact" class="text-white/60 text-sm hover:text-white">Contact Us</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="font-display font-bold mb-3 text-white/80">More</p>
+            <ul class="space-y-1.5">
+              <li><a href="/2429/dogs-and-litters" class="text-white/60 text-sm hover:text-white">Our Dogs &amp; Litters</a></li>
+              <li><a href="/2429/terms" class="text-white/60 text-sm hover:text-white">Terms &amp; Conditions</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p class="text-white/40 text-xs">&copy; 2025 Reed House Kennels. All rights reserved.</p>
+          <p class="text-white/30 text-xs">Preview redesign by <a href="https://biscuitweb.co.uk" class="hover:text-white/60">Biscuit Web</a></p>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>

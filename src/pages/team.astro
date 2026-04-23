@@ -1,0 +1,193 @@
+---
+import '../styles/site.css';
+const nav = [
+  { label: 'Home',        href: '/2429' },
+  { label: 'Kennels',     href: '/2429/kennels' },
+  { label: 'Cattery',     href: '/2429/cattery' },
+  { label: 'Pets at Home',href: '/2429/pet-sitting' },
+  { label: 'Livery Yard', href: '/2429/livery' },
+  { label: 'Rehoming',    href: '/2429/rehoming' },
+  { label: 'Prices',      href: '/2429/prices' },
+  { label: 'Gallery',     href: '/2429/gallery' },
+  { label: 'Contact',     href: '/2429/contact' },
+];
+const img = (f: string) => `/2429/images/${f}`;
+---
+
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Our Team | Reed House Kennels, Warrington</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="preload" href="/2429/fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/2429/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  </head>
+  <body class="bg-brand-bg">
+
+    <div class="bg-brand-primary text-white py-2.5 px-4 text-center text-sm sticky top-0 z-50">
+      <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4">
+        <span>Preview redesign for <strong>Reed House Kennels</strong> by <strong>Biscuit Web</strong></span>
+        <a href="https://biscuitweb.co.uk/activate?id=2429&name=Reed%20House%20Kennels" class="inline-flex items-center px-4 py-1 bg-brand-accent text-brand-primary font-bold text-xs rounded-full hover:opacity-80 transition-opacity shrink-0">Like it? Activate for &pound;50</a>
+      </div>
+    </div>
+
+    <header class="bg-white border-b border-border sticky top-10 z-40">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 py-3 flex items-center justify-between">
+        <a href="/2429" class="font-display font-extrabold text-lg text-brand-primary leading-tight">Reed House<span class="text-brand-accent"> Kennels</span></a>
+        <button class="lg:hidden p-2 text-ink-soft" onclick="document.getElementById('mobile-nav-team').classList.toggle('hidden')" aria-label="Menu">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+        <nav class="hidden lg:flex items-center gap-5">
+          {nav.map(n => (
+            <a href={n.href} class="text-sm font-semibold text-ink-soft hover:text-brand-primary transition-colors">{n.label}</a>
+          ))}
+          <a href="tel:01619415699" class="inline-flex items-center px-4 py-2 bg-brand-primary text-white font-display font-bold text-sm rounded-lg hover:opacity-90 transition-opacity">0161 941 5699</a>
+        </nav>
+      </div>
+      <nav id="mobile-nav-team" class="hidden lg:hidden px-4 pb-4 space-y-2 bg-white border-t border-border">
+        {nav.map(n => (
+          <a href={n.href} class="text-ink-soft block text-sm font-semibold hover:text-brand-primary py-1">{n.label}</a>
+        ))}
+        <a href="tel:01619415699" class="block px-4 py-2.5 bg-brand-primary text-white font-display font-bold text-sm rounded-lg text-center">0161 941 5699</a>
+      </nav>
+    </header>
+
+    <!-- Page header -->
+    <section class="bg-brand-primary py-16 sm:py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <h1 class="font-display font-extrabold text-3xl sm:text-5xl lg:text-6xl text-white">Meet Our Team</h1>
+        <p class="mt-4 text-white/80 text-lg max-w-xl">Our team at Reed House are experienced and well trained to care for your pets in your absence. Each member of staff has been chosen for their love of animals, and their sincere desire to care for our boarders.</p>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section class="py-16 sm:py-20 bg-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <!-- Alan & Alison -->
+          <div class="bg-brand-bg rounded-2xl overflow-hidden border border-border">
+            <div class="aspect-square overflow-hidden">
+              <img src={img('alanalison-picture.jpg')} alt="Alan and Alison Edwards, owners of Reed House Kennels" class="w-full h-full object-cover object-center" loading="lazy" width="250" height="215" />
+            </div>
+            <div class="p-6">
+              <h2 class="font-display font-extrabold text-xl text-ink mb-1">Alan &amp; Alison Edwards</h2>
+              <p class="text-brand-primary font-semibold text-sm mb-3">Owners</p>
+              <p class="text-ink-soft text-sm">"Alan and I are responsible for the day to day management of all aspects of the farm. We take great pride in ensuring that we maintain high standards, whilst still creating a warm and welcoming atmosphere."</p>
+            </div>
+          </div>
+
+          <!-- Alex Wilson -->
+          <div class="bg-brand-bg rounded-2xl overflow-hidden border border-border">
+            <div class="aspect-square overflow-hidden bg-brand-cream flex items-center justify-center">
+              <span class="text-6xl">🐾</span>
+            </div>
+            <div class="p-6">
+              <h2 class="font-display font-extrabold text-xl text-ink mb-1">Alex Wilson</h2>
+              <p class="text-brand-primary font-semibold text-sm mb-3">General Assistant</p>
+              <p class="text-ink-soft text-sm">Alex has been here 6 years and has 2 horses, 2 dogs and 2 cats. She loves to meet new people and their pets and to help them settle into our routine.</p>
+            </div>
+          </div>
+
+          <!-- Tom Edwards -->
+          <div class="bg-brand-bg rounded-2xl overflow-hidden border border-border">
+            <div class="aspect-square overflow-hidden bg-brand-cream flex items-center justify-center">
+              <span class="text-6xl">🦮</span>
+            </div>
+            <div class="p-6">
+              <h2 class="font-display font-extrabold text-xl text-ink mb-1">Tom Edwards</h2>
+              <p class="text-brand-primary font-semibold text-sm mb-3">General Assistant</p>
+              <p class="text-ink-soft text-sm">Tom Edwards is at university studying geography and works here part time. He is responsible for the dog walking most days.</p>
+            </div>
+          </div>
+
+          <!-- Baxter -->
+          <div class="bg-brand-bg rounded-2xl overflow-hidden border border-border">
+            <div class="aspect-square overflow-hidden">
+              <img src={img('baxter-recptionist.png')} alt="Baxter, Head of Security at Reed House Kennels" class="w-full h-full object-cover object-center" loading="lazy" width="250" height="215" />
+            </div>
+            <div class="p-6">
+              <h2 class="font-display font-extrabold text-xl text-ink mb-1">Baxter</h2>
+              <p class="text-brand-primary font-semibold text-sm mb-3">Head of Security</p>
+              <p class="text-ink-soft text-sm">Baxter keeps a careful eye on the whole operation. Nothing gets past him.</p>
+            </div>
+          </div>
+
+          <!-- Petunia -->
+          <div class="bg-brand-bg rounded-2xl overflow-hidden border border-border">
+            <div class="aspect-square overflow-hidden">
+              <img src={img('petunia-recptionist-1.png')} alt="Petunia, Head Receptionist at Reed House Kennels" class="w-full h-full object-cover object-center" loading="lazy" width="250" height="377" />
+            </div>
+            <div class="p-6">
+              <h2 class="font-display font-extrabold text-xl text-ink mb-1">Petunia</h2>
+              <p class="text-brand-primary font-semibold text-sm mb-3">Head Receptionist</p>
+              <p class="text-ink-soft text-sm">Petunia manages all front-of-house operations with characteristic flair. Loves a fuss.</p>
+            </div>
+          </div>
+
+          <!-- Vet students -->
+          <div class="bg-brand-bg rounded-2xl overflow-hidden border border-border">
+            <div class="aspect-square overflow-hidden bg-brand-cream flex items-center justify-center">
+              <span class="text-6xl">🎓</span>
+            </div>
+            <div class="p-6">
+              <h2 class="font-display font-extrabold text-xl text-ink mb-1">Veterinary Students</h2>
+              <p class="text-brand-primary font-semibold text-sm mb-3">Placement Staff</p>
+              <p class="text-ink-soft text-sm">We also have lots of veterinary students who do placements during the year, helping out in the kennels and cattery.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-ink text-white py-12">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          <div>
+            <p class="font-display font-extrabold text-xl mb-2">Reed House Kennels</p>
+            <p class="text-white/60 text-sm">Reed House Farm<br />Gorsey Lane, Warburton, Lymm<br />Cheshire WA13 9UB</p>
+            <p class="text-white/60 text-sm mt-3"><a href="tel:01619415699" class="hover:text-white">0161 941 5699</a></p>
+            <p class="text-white/60 text-sm"><a href="mailto:info@reedhousekennels.co.uk" class="hover:text-white">info@reedhousekennels.co.uk</a></p>
+          </div>
+          <div>
+            <p class="font-display font-bold mb-3 text-white/80">Services</p>
+            <ul class="space-y-1.5">
+              <li><a href="/2429/kennels" class="text-white/60 text-sm hover:text-white">Kennels</a></li>
+              <li><a href="/2429/cattery" class="text-white/60 text-sm hover:text-white">Cattery</a></li>
+              <li><a href="/2429/pet-sitting" class="text-white/60 text-sm hover:text-white">Pets Stay at Home</a></li>
+              <li><a href="/2429/livery" class="text-white/60 text-sm hover:text-white">Livery Yard</a></li>
+              <li><a href="/2429/rehoming" class="text-white/60 text-sm hover:text-white">Rehoming</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="font-display font-bold mb-3 text-white/80">Information</p>
+            <ul class="space-y-1.5">
+              <li><a href="/2429/prices" class="text-white/60 text-sm hover:text-white">Prices</a></li>
+              <li><a href="/2429/gallery" class="text-white/60 text-sm hover:text-white">Gallery</a></li>
+              <li><a href="/2429/team" class="text-white/60 text-sm hover:text-white">Our Team</a></li>
+              <li><a href="/2429/faq" class="text-white/60 text-sm hover:text-white">FAQ</a></li>
+              <li><a href="/2429/testimonials" class="text-white/60 text-sm hover:text-white">Testimonials</a></li>
+              <li><a href="/2429/contact" class="text-white/60 text-sm hover:text-white">Contact Us</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="font-display font-bold mb-3 text-white/80">More</p>
+            <ul class="space-y-1.5">
+              <li><a href="/2429/dogs-and-litters" class="text-white/60 text-sm hover:text-white">Our Dogs &amp; Litters</a></li>
+              <li><a href="/2429/terms" class="text-white/60 text-sm hover:text-white">Terms &amp; Conditions</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p class="text-white/40 text-xs">&copy; 2025 Reed House Kennels. All rights reserved.</p>
+          <p class="text-white/30 text-xs">Preview redesign by <a href="https://biscuitweb.co.uk" class="hover:text-white/60">Biscuit Web</a></p>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>

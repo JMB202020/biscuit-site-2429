@@ -1,0 +1,172 @@
+---
+import '../styles/site.css';
+const nav = [
+  { label: 'Home',        href: '/2429' },
+  { label: 'Kennels',     href: '/2429/kennels' },
+  { label: 'Cattery',     href: '/2429/cattery' },
+  { label: 'Pets at Home',href: '/2429/pet-sitting' },
+  { label: 'Livery Yard', href: '/2429/livery' },
+  { label: 'Rehoming',    href: '/2429/rehoming' },
+  { label: 'Prices',      href: '/2429/prices' },
+  { label: 'Gallery',     href: '/2429/gallery' },
+  { label: 'Contact',     href: '/2429/contact' },
+];
+const img = (f: string) => `/2429/images/${f}`;
+---
+
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Our Dogs &amp; Their Litters | Reed House Farm</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="preload" href="/2429/fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/2429/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  </head>
+  <body class="bg-brand-bg">
+
+    <div class="bg-brand-primary text-white py-2.5 px-4 text-center text-sm sticky top-0 z-50">
+      <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4">
+        <span>Preview redesign for <strong>Reed House Kennels</strong> by <strong>Biscuit Web</strong></span>
+        <a href="https://biscuitweb.co.uk/activate?id=2429&name=Reed%20House%20Kennels" class="inline-flex items-center px-4 py-1 bg-brand-accent text-brand-primary font-bold text-xs rounded-full hover:opacity-80 transition-opacity shrink-0">Like it? Activate for &pound;50</a>
+      </div>
+    </div>
+
+    <header class="bg-white border-b border-border sticky top-10 z-40">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 py-3 flex items-center justify-between">
+        <a href="/2429" class="font-display font-extrabold text-lg text-brand-primary leading-tight">Reed House<span class="text-brand-accent"> Kennels</span></a>
+        <button class="lg:hidden p-2 text-ink-soft" onclick="document.getElementById('mobile-nav-dogs').classList.toggle('hidden')" aria-label="Menu">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+        <nav class="hidden lg:flex items-center gap-5">
+          {nav.map(n => (
+            <a href={n.href} class="text-sm font-semibold text-ink-soft hover:text-brand-primary transition-colors">{n.label}</a>
+          ))}
+          <a href="tel:01619415699" class="inline-flex items-center px-4 py-2 bg-brand-primary text-white font-display font-bold text-sm rounded-lg hover:opacity-90 transition-opacity">0161 941 5699</a>
+        </nav>
+      </div>
+      <nav id="mobile-nav-dogs" class="hidden lg:hidden px-4 pb-4 space-y-2 bg-white border-t border-border">
+        {nav.map(n => (
+          <a href={n.href} class="text-ink-soft block text-sm font-semibold hover:text-brand-primary py-1">{n.label}</a>
+        ))}
+        <a href="tel:01619415699" class="block px-4 py-2.5 bg-brand-primary text-white font-display font-bold text-sm rounded-lg text-center">0161 941 5699</a>
+      </nav>
+    </header>
+
+    <!-- Page header -->
+    <section class="bg-brand-primary py-16 sm:py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <h1 class="font-display font-extrabold text-3xl sm:text-5xl lg:text-6xl text-white">Our Dogs &amp; Their Litters</h1>
+        <p class="mt-4 text-white/80 text-lg max-w-xl">We breed long-haired, straight-backed German Shepherds. All Kennel Club registered, bred for temperament.</p>
+      </div>
+    </section>
+
+    <!-- Intro -->
+    <section class="py-12 bg-white">
+      <div class="mx-auto max-w-4xl px-4 sm:px-6">
+        <p class="text-ink-soft text-lg mb-4">We breed long-haired, straight-backed German Shepherds. They are all Kennel Club registered and are bred for temperament. We have a stud dog that belongs to <a href="http://www.rockforcegsd.co.uk" target="_blank" rel="noopener" class="text-brand-primary underline">www.rockforcegsd.co.uk</a>.</p>
+        <p class="text-ink-soft mb-6">We encourage people who are looking for a puppy to come and visit our dogs so you can meet them and we can meet you. If you do want to visit our Shepherd, please call to discuss your needs and then we can make an appointment for you to come and meet the gang.</p>
+        <a href="tel:01619415699" class="inline-flex items-center px-6 py-3 bg-brand-primary text-white font-display font-bold text-base rounded-xl hover:opacity-90">Call 0161 941 5699 to arrange a visit</a>
+      </div>
+    </section>
+
+    <!-- Bandit -->
+    <section class="py-12 bg-brand-bg">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="grid lg:grid-cols-2 gap-10 items-start">
+          <div>
+            <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-ink mb-4">Bandit</h2>
+            <p class="text-brand-primary font-semibold mb-3">German Shepherd Stud Dog</p>
+            <p class="text-ink-soft mb-4">Strettonhills Made to Order for Rockforce, known as Bandit, who has lived with us since he was 8 weeks old.</p>
+            <div class="rounded-2xl overflow-hidden mb-4">
+              <img src={img('bandit.jpg')} alt="Bandit, German Shepherd stud dog at Reed House" class="w-full object-cover" loading="lazy" width="250" height="215" />
+            </div>
+          </div>
+          <div>
+            <div class="rounded-2xl overflow-hidden">
+              <img src={img('bandit-pics.jpg')} alt="Photos of Bandit the German Shepherd" class="w-full object-cover" loading="lazy" width="797" height="300" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Winnie -->
+    <section class="py-12 bg-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="grid lg:grid-cols-2 gap-10 items-start">
+          <div>
+            <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-ink mb-4">Winnie</h2>
+            <p class="text-brand-primary font-semibold mb-3">German Shepherd Breeding Bitch</p>
+            <p class="text-ink-soft mb-4">We have Winnie our breeding bitch and her daughter Hattie, who was born here in August 2020.</p>
+            <div class="rounded-2xl overflow-hidden mb-4">
+              <img src={img('winnie.jpg')} alt="Winnie, German Shepherd at Reed House" class="w-full object-cover" loading="lazy" width="250" height="215" />
+            </div>
+          </div>
+          <div>
+            <div class="rounded-2xl overflow-hidden">
+              <img src={img('winnie-pics.jpg')} alt="Photos of Winnie the German Shepherd" class="w-full object-cover" loading="lazy" width="797" height="300" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-12 bg-brand-primary">
+      <div class="mx-auto max-w-4xl px-4 sm:px-6 text-center">
+        <h2 class="font-display font-bold text-2xl text-white mb-4">Interested in a puppy?</h2>
+        <p class="text-white/80 mb-6">Please call us to discuss your needs and we can arrange for you to come and meet the dogs.</p>
+        <a href="tel:01619415699" class="inline-flex items-center px-6 py-3 bg-brand-accent text-brand-primary font-display font-bold text-base rounded-xl hover:opacity-90">Call 0161 941 5699</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-ink text-white py-12">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          <div>
+            <p class="font-display font-extrabold text-xl mb-2">Reed House Kennels</p>
+            <p class="text-white/60 text-sm">Reed House Farm<br />Gorsey Lane, Warburton, Lymm<br />Cheshire WA13 9UB</p>
+            <p class="text-white/60 text-sm mt-3"><a href="tel:01619415699" class="hover:text-white">0161 941 5699</a></p>
+            <p class="text-white/60 text-sm"><a href="mailto:info@reedhousekennels.co.uk" class="hover:text-white">info@reedhousekennels.co.uk</a></p>
+          </div>
+          <div>
+            <p class="font-display font-bold mb-3 text-white/80">Services</p>
+            <ul class="space-y-1.5">
+              <li><a href="/2429/kennels" class="text-white/60 text-sm hover:text-white">Kennels</a></li>
+              <li><a href="/2429/cattery" class="text-white/60 text-sm hover:text-white">Cattery</a></li>
+              <li><a href="/2429/pet-sitting" class="text-white/60 text-sm hover:text-white">Pets Stay at Home</a></li>
+              <li><a href="/2429/livery" class="text-white/60 text-sm hover:text-white">Livery Yard</a></li>
+              <li><a href="/2429/rehoming" class="text-white/60 text-sm hover:text-white">Rehoming</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="font-display font-bold mb-3 text-white/80">Information</p>
+            <ul class="space-y-1.5">
+              <li><a href="/2429/prices" class="text-white/60 text-sm hover:text-white">Prices</a></li>
+              <li><a href="/2429/gallery" class="text-white/60 text-sm hover:text-white">Gallery</a></li>
+              <li><a href="/2429/team" class="text-white/60 text-sm hover:text-white">Our Team</a></li>
+              <li><a href="/2429/faq" class="text-white/60 text-sm hover:text-white">FAQ</a></li>
+              <li><a href="/2429/testimonials" class="text-white/60 text-sm hover:text-white">Testimonials</a></li>
+              <li><a href="/2429/contact" class="text-white/60 text-sm hover:text-white">Contact Us</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="font-display font-bold mb-3 text-white/80">More</p>
+            <ul class="space-y-1.5">
+              <li><a href="/2429/dogs-and-litters" class="text-white/60 text-sm hover:text-white">Our Dogs &amp; Litters</a></li>
+              <li><a href="/2429/terms" class="text-white/60 text-sm hover:text-white">Terms &amp; Conditions</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p class="text-white/40 text-xs">&copy; 2025 Reed House Kennels. All rights reserved.</p>
+          <p class="text-white/30 text-xs">Preview redesign by <a href="https://biscuitweb.co.uk" class="hover:text-white/60">Biscuit Web</a></p>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>

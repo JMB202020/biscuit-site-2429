@@ -1,0 +1,350 @@
+---
+import '../styles/site.css';
+const nav = [
+  { label: 'Home',        href: '/2429' },
+  { label: 'Kennels',     href: '/2429/kennels' },
+  { label: 'Cattery',     href: '/2429/cattery' },
+  { label: 'Pets at Home',href: '/2429/pet-sitting' },
+  { label: 'Livery Yard', href: '/2429/livery' },
+  { label: 'Rehoming',    href: '/2429/rehoming' },
+  { label: 'Prices',      href: '/2429/prices' },
+  { label: 'Gallery',     href: '/2429/gallery' },
+  { label: 'Contact',     href: '/2429/contact' },
+];
+const img = (f: string) => `/2429/images/${f}`;
+---
+
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Reed House Kennels &amp; Cattery | Boarding near Warrington, Cheshire</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="preload" href="/2429/fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/2429/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  </head>
+  <body class="bg-brand-bg">
+
+    <!-- Preview banner -->
+    <div class="bg-brand-primary text-white py-2.5 px-4 text-center text-sm sticky top-0 z-50">
+      <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4">
+        <span>Preview redesign for <strong>Reed House Kennels</strong> by <strong>Biscuit Web</strong></span>
+        <a href="https://biscuitweb.co.uk/activate?id=2429&name=Reed%20House%20Kennels" class="inline-flex items-center px-4 py-1 bg-brand-accent text-brand-primary font-bold text-xs rounded-full hover:opacity-80 transition-opacity shrink-0">
+          Like it? Activate for &pound;50
+        </a>
+      </div>
+    </div>
+
+    <!-- Nav -->
+    <header class="bg-white border-b border-border sticky top-10 z-40">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 py-3 flex items-center justify-between">
+        <a href="/2429" class="font-display font-extrabold text-lg text-brand-primary leading-tight">Reed House<br class="hidden sm:block" /><span class="text-brand-accent"> Kennels</span></a>
+        <button class="lg:hidden p-2 text-ink-soft" onclick="document.getElementById('mobile-nav-2429').classList.toggle('hidden')" aria-label="Menu">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+        <nav class="hidden lg:flex items-center gap-5">
+          {nav.map(n => (
+            <a href={n.href} class={`text-sm font-semibold transition-colors ${n.href === '/2429' ? 'text-brand-primary' : 'text-ink-soft hover:text-brand-primary'}`}>{n.label}</a>
+          ))}
+          <a href="tel:01619415699" class="inline-flex items-center px-4 py-2 bg-brand-primary text-white font-display font-bold text-sm rounded-lg hover:opacity-90 transition-opacity">0161 941 5699</a>
+        </nav>
+      </div>
+      <nav id="mobile-nav-2429" class="hidden lg:hidden px-4 pb-4 space-y-2 bg-white border-t border-border">
+        {nav.map(n => (
+          <a href={n.href} class="text-ink-soft block text-sm font-semibold hover:text-brand-primary py-1">{n.label}</a>
+        ))}
+        <a href="tel:01619415699" class="block px-4 py-2.5 bg-brand-primary text-white font-display font-bold text-sm rounded-lg text-center hover:opacity-90 transition-opacity">0161 941 5699</a>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="relative min-h-[60vh] sm:min-h-[80vh] overflow-hidden flex items-center">
+      <img src={img('slider-1-2022a.jpg')} alt="Reed House Kennels countryside setting" class="absolute inset-0 w-full h-full object-cover" fetchpriority="high" />
+      <div class="absolute inset-0 bg-black/70"></div>
+      <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 py-16 sm:py-24">
+        <p class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-semibold mb-6 bg-white/20 text-white backdrop-blur-sm">📍 Lymm / Warrington, Cheshire</p>
+        <h1 class="font-display font-extrabold text-3xl sm:text-5xl lg:text-6xl text-white leading-tight tracking-tight max-w-2xl">Reed House Kennels &amp; Cattery</h1>
+        <p class="mt-4 text-lg sm:text-xl text-white/90 max-w-xl">Family-run boarding kennels, cattery and livery yard set on a beautiful Cheshire farm. Your pets are treated like family.</p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="tel:01619415699" class="inline-flex items-center px-6 py-3 sm:px-8 sm:py-4 bg-brand-accent text-brand-primary font-display font-bold text-base rounded-xl hover:opacity-90 transition-all">Book: 0161 941 5699</a>
+          <a href="/2429/prices" class="inline-flex items-center px-6 py-3 sm:px-8 sm:py-4 border-2 border-white text-white font-display font-bold text-base rounded-xl hover:bg-white/10 transition-all">View prices</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust strip -->
+    <section class="bg-brand-primary py-6">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+          <div class="text-white">
+            <p class="font-display font-extrabold text-lg">Licensed &amp; Inspected</p>
+            <p class="text-white/80 text-sm">Trafford Borough Council</p>
+          </div>
+          <div class="text-white">
+            <p class="font-display font-extrabold text-lg">24hr Vet Cover</p>
+            <p class="text-white/80 text-sm">Always available</p>
+          </div>
+          <div class="text-white">
+            <p class="font-display font-extrabold text-lg">Pick-up &amp; Drop-off</p>
+            <p class="text-white/80 text-sm">Fully equipped van</p>
+          </div>
+          <div class="text-white">
+            <p class="font-display font-extrabold text-lg">Classic FM</p>
+            <p class="text-white/80 text-sm">Plays all day in kennels</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services overview -->
+    <section class="py-16 sm:py-20 bg-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-ink mb-4 text-center">Our Services</h2>
+        <p class="text-ink-soft text-center max-w-2xl mx-auto mb-12">From boarding kennels and cattery to pet sitting and a livery yard, Reed House Farm covers all the bases.</p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <a href="/2429/kennels" class="group block bg-brand-bg rounded-2xl overflow-hidden border border-border hover:shadow-lg transition-shadow">
+            <div class="aspect-[4/3] overflow-hidden">
+              <img src={img('kennels-pic.jpg')} alt="Dog kennels at Reed House" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" width="250" height="350" />
+            </div>
+            <div class="p-6">
+              <h3 class="font-display font-extrabold text-xl text-ink mb-2">🐕 Kennels</h3>
+              <p class="text-ink-soft text-sm">Spacious kennels with outdoor runs. Classic FM plays all day, minimum two walks daily. Dogs of all sizes and temperaments welcome.</p>
+              <span class="mt-4 inline-block text-brand-primary font-semibold text-sm group-hover:underline">Find out more &rarr;</span>
+            </div>
+          </a>
+          <a href="/2429/cattery" class="group block bg-brand-bg rounded-2xl overflow-hidden border border-border hover:shadow-lg transition-shadow">
+            <div class="aspect-[4/3] overflow-hidden">
+              <img src={img('cattery-pic.jpg')} alt="Cattery at Reed House" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" width="250" height="310" />
+            </div>
+            <div class="p-6">
+              <h3 class="font-display font-extrabold text-xl text-ink mb-2">🐱 Cattery</h3>
+              <p class="text-ink-soft text-sm">Individual chalets with sneeze barriers, individual heaters and eco wood-pellet litter. Cats can see around them without direct contact with neighbours.</p>
+              <span class="mt-4 inline-block text-brand-primary font-semibold text-sm group-hover:underline">Find out more &rarr;</span>
+            </div>
+          </a>
+          <a href="/2429/pet-sitting" class="group block bg-brand-bg rounded-2xl overflow-hidden border border-border hover:shadow-lg transition-shadow">
+            <div class="aspect-[4/3] overflow-hidden">
+              <img src={img('pets-stay-dog.jpg')} alt="Pet sitting service" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" width="250" height="105" />
+            </div>
+            <div class="p-6">
+              <h3 class="font-display font-extrabold text-xl text-ink mb-2">🏠 Pets Stay at Home</h3>
+              <p class="text-ink-soft text-sm">Your pet stays in your own home with daily visits from our trained team. Three visits a day, customised to your pet's normal routine.</p>
+              <span class="mt-4 inline-block text-brand-primary font-semibold text-sm group-hover:underline">Find out more &rarr;</span>
+            </div>
+          </a>
+          <a href="/2429/livery" class="group block bg-brand-bg rounded-2xl overflow-hidden border border-border hover:shadow-lg transition-shadow">
+            <div class="aspect-[4/3] overflow-hidden">
+              <img src={img('livery.jpg')} alt="Livery yard at Reed House" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" width="250" height="480" />
+            </div>
+            <div class="p-6">
+              <h3 class="font-display font-extrabold text-xl text-ink mb-2">🐴 Livery Yard</h3>
+              <p class="text-ink-soft text-sm">Two floodlit arenas, post and rail fencing, homemade hay and haylage. Close to the Trans Pennine Trail for off-road hacking.</p>
+              <span class="mt-4 inline-block text-brand-primary font-semibold text-sm group-hover:underline">Find out more &rarr;</span>
+            </div>
+          </a>
+          <a href="/2429/rehoming" class="group block bg-brand-bg rounded-2xl overflow-hidden border border-border hover:shadow-lg transition-shadow">
+            <div class="aspect-[4/3] overflow-hidden">
+              <img src={img('rehoming.jpg')} alt="Animal rehoming" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" width="300" height="298" />
+            </div>
+            <div class="p-6">
+              <h3 class="font-display font-extrabold text-xl text-ink mb-2">💛 Rehoming</h3>
+              <p class="text-ink-soft text-sm">We help animals find new forever homes. Dogs, cats, guinea pigs and other small animals in need of a loving family.</p>
+              <span class="mt-4 inline-block text-brand-primary font-semibold text-sm group-hover:underline">Find out more &rarr;</span>
+            </div>
+          </a>
+          <a href="/2429/prices" class="group block bg-brand-accent/20 rounded-2xl overflow-hidden border border-brand-accent hover:shadow-lg transition-shadow flex flex-col justify-center">
+            <div class="p-6 text-center">
+              <p class="text-4xl mb-3">💷</p>
+              <h3 class="font-display font-extrabold text-xl text-ink mb-2">Our Prices</h3>
+              <p class="text-ink-soft text-sm mb-4">Dogs from £19/day. Cats from £11/day. Family discounts available. No hidden extras.</p>
+              <span class="inline-block px-5 py-2 bg-brand-primary text-white font-display font-bold text-sm rounded-lg hover:opacity-90 transition-opacity">See all prices &rarr;</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About section -->
+    <section class="py-16 sm:py-20 bg-brand-cream">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-ink mb-6">A true home from home</h2>
+            <p class="text-ink-soft mb-4">Reed House Farm sits in the heart of the Cheshire countryside, between Altrincham and Lymm. Alan and Alison Edwards have built a place where animals genuinely thrive in their owners' absence.</p>
+            <p class="text-ink-soft mb-4">Our team are experienced, trained animal lovers who have plenty of time for each individual animal. Whether your dog is elderly, nervous or just a bit timid, nothing is too much trouble.</p>
+            <p class="text-ink-soft mb-6">We also have veterinary students on placement throughout the year, and 24-hour vet cover is always available. You can leave knowing your pet is in safe hands.</p>
+            <div class="flex flex-wrap gap-4">
+              <a href="/2429/team" class="inline-flex items-center px-5 py-2.5 bg-brand-primary text-white font-display font-bold text-sm rounded-lg hover:opacity-90 transition-opacity">Meet the team</a>
+              <a href="/2429/contact" class="inline-flex items-center px-5 py-2.5 border border-brand-primary text-brand-primary font-display font-bold text-sm rounded-lg hover:bg-brand-primary/5 transition-all">Get in touch</a>
+            </div>
+          </div>
+          <div class="relative">
+            <img src={img('alanalison-picture.jpg')} alt="Alan and Alison Edwards, owners of Reed House Kennels" class="rounded-2xl w-full object-cover" loading="lazy" width="250" height="215" />
+            <div class="mt-4 grid grid-cols-2 gap-4">
+              <img src={img('baxter-recptionist.png')} alt="Baxter, Head of Security at Reed House" class="rounded-xl w-full object-cover" loading="lazy" width="250" height="215" />
+              <img src={img('petunia-recptionist.png')} alt="Petunia, Head Receptionist at Reed House" class="rounded-xl w-full object-cover" loading="lazy" width="250" height="215" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Facilities highlight -->
+    <section class="py-16 sm:py-20 bg-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-ink mb-4 text-center">Why dogs love it here</h2>
+        <p class="text-ink-soft text-center max-w-xl mx-auto mb-12">We've thought of everything to make your dog's stay as enjoyable as possible.</p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-brand-bg rounded-2xl p-6 border border-border">
+            <p class="text-3xl mb-3">🎵</p>
+            <h3 class="font-display font-bold text-lg text-ink mb-2">Classic FM all day</h3>
+            <p class="text-ink-soft text-sm">Scientifically proven to reduce stress and increase tranquillity in animals. Our kennels are genuinely calm and peaceful.</p>
+          </div>
+          <div class="bg-brand-bg rounded-2xl p-6 border border-border">
+            <p class="text-3xl mb-3">🦮</p>
+            <h3 class="font-display font-bold text-lg text-ink mb-2">Woodland walks</h3>
+            <p class="text-ink-soft text-sm">At least two walks per day. Upgrade to an hour-long woodland walk around the beautiful Dunham Massey estate.</p>
+          </div>
+          <div class="bg-brand-bg rounded-2xl p-6 border border-border">
+            <p class="text-3xl mb-3">✂️</p>
+            <h3 class="font-display font-bold text-lg text-ink mb-2">Dog bathing</h3>
+            <p class="text-ink-soft text-sm">Treat your dog to a bath while they're away. Our Head of Kennels and Cattery is fully qualified.</p>
+          </div>
+          <div class="bg-brand-bg rounded-2xl p-6 border border-border">
+            <p class="text-3xl mb-3">🚐</p>
+            <h3 class="font-display font-bold text-lg text-ink mb-2">Pick-up and drop-off</h3>
+            <p class="text-ink-soft text-sm">Our fully equipped van can collect and return your pets safely. A small extra charge may apply. Just ask us.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery strip -->
+    <section class="py-16 sm:py-20 bg-brand-bg">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="flex items-center justify-between mb-8">
+          <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-ink">Photo gallery</h2>
+          <a href="/2429/gallery" class="text-brand-primary font-semibold text-sm hover:underline">See all photos &rarr;</a>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+          {['image01.jpg','image02.jpg','image03.jpg','image04.jpg','image05.jpg','image06.jpg','image07.jpg','image08.jpg'].map((f, i) => (
+            <div class="aspect-square overflow-hidden rounded-xl">
+              <img src={img(f)} alt={`Reed House Kennels photo ${i+1}`} class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" width="200" height="200" />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 sm:py-20 bg-brand-primary">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white mb-12 text-center">What our customers say</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-white/10 rounded-2xl p-6">
+            <p class="text-white/90 italic mb-4">"I have used several kennels in the past 18 months and Reed House is by far the best. My dog gets excited when we enter their yard and is happy to stay there. This has never happened after a stay at other kennels."</p>
+            <p class="text-brand-accent font-semibold text-sm">Satisfied customer</p>
+          </div>
+          <div class="bg-white/10 rounded-2xl p-6">
+            <p class="text-white/90 italic mb-4">"Our Jack is a rescue dog who has always had a fear of people, so we were always reluctant to leave him in kennels. After the first time he seemed so happy after his weekend away. He enjoys the long walks in the country."</p>
+            <p class="text-brand-accent font-semibold text-sm">Jack's owner</p>
+          </div>
+          <div class="bg-white/10 rounded-2xl p-6">
+            <p class="text-white/90 italic mb-4">"We're just so glad we found a kennels that we can trust our dog to. To be able to go away and know that he is in safe, caring hands is such a comfort and a weight off our minds."</p>
+            <p class="text-brand-accent font-semibold text-sm">Regular boarder</p>
+          </div>
+        </div>
+        <div class="text-center mt-8">
+          <a href="/2429/testimonials" class="inline-flex items-center px-6 py-3 border-2 border-white text-white font-display font-bold text-sm rounded-xl hover:bg-white/10 transition-all">Read all testimonials</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ teaser -->
+    <section class="py-16 sm:py-20 bg-white">
+      <div class="mx-auto max-w-4xl px-4 sm:px-6">
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-ink mb-4 text-center">Common questions</h2>
+        <div class="space-y-4 mt-8">
+          <div class="border border-border rounded-xl p-5">
+            <h3 class="font-display font-bold text-ink mb-1">What are your opening hours?</h3>
+            <p class="text-ink-soft text-sm">Mon to Fri: 9am to 11am and 2pm to 6pm. Saturday: 9am to 4pm. Sunday: 10am to 4pm.</p>
+          </div>
+          <div class="border border-border rounded-xl p-5">
+            <h3 class="font-display font-bold text-ink mb-1">Can I visit before booking?</h3>
+            <p class="text-ink-soft text-sm">Yes, we actively encourage visits. Come between 2pm and 4pm any day of the week. No appointment needed.</p>
+          </div>
+          <div class="border border-border rounded-xl p-5">
+            <h3 class="font-display font-bold text-ink mb-1">Do you walk the dogs?</h3>
+            <p class="text-ink-soft text-sm">All dogs have a minimum of two walks per day. You can also upgrade to an hour-long woodland walk at Dunham Massey.</p>
+          </div>
+        </div>
+        <div class="text-center mt-8">
+          <a href="/2429/faq" class="inline-flex items-center px-6 py-3 bg-brand-primary text-white font-display font-bold text-sm rounded-xl hover:opacity-90 transition-all">All FAQs &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 sm:py-20 bg-brand-accent">
+      <div class="mx-auto max-w-4xl px-4 sm:px-6 text-center">
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-brand-primary mb-4">Ready to book?</h2>
+        <p class="text-brand-primary/80 mb-8 text-lg max-w-xl mx-auto">Give us a call or send an email and we'll confirm your dates. We cover Warrington, Lymm, Altrincham, Sale, Hale, Bowdon and surrounding areas.</p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="tel:01619415699" class="inline-flex items-center px-8 py-4 bg-brand-primary text-white font-display font-bold text-base rounded-xl hover:opacity-90 transition-all">0161 941 5699</a>
+          <a href="mailto:info@reedhousekennels.co.uk" class="inline-flex items-center px-8 py-4 border-2 border-brand-primary text-brand-primary font-display font-bold text-base rounded-xl hover:bg-brand-primary/10 transition-all">info@reedhousekennels.co.uk</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-ink text-white py-12">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          <div>
+            <p class="font-display font-extrabold text-xl mb-2">Reed House Kennels</p>
+            <p class="text-white/60 text-sm">Reed House Farm<br />Gorsey Lane, Warburton, Lymm<br />Cheshire WA13 9UB</p>
+            <p class="text-white/60 text-sm mt-3"><a href="tel:01619415699" class="hover:text-white transition-colors">0161 941 5699</a></p>
+            <p class="text-white/60 text-sm"><a href="mailto:info@reedhousekennels.co.uk" class="hover:text-white transition-colors">info@reedhousekennels.co.uk</a></p>
+          </div>
+          <div>
+            <p class="font-display font-bold mb-3 text-white/80">Services</p>
+            <ul class="space-y-1.5">
+              <li><a href="/2429/kennels" class="text-white/60 text-sm hover:text-white transition-colors">Kennels</a></li>
+              <li><a href="/2429/cattery" class="text-white/60 text-sm hover:text-white transition-colors">Cattery</a></li>
+              <li><a href="/2429/pet-sitting" class="text-white/60 text-sm hover:text-white transition-colors">Pets Stay at Home</a></li>
+              <li><a href="/2429/livery" class="text-white/60 text-sm hover:text-white transition-colors">Livery Yard</a></li>
+              <li><a href="/2429/rehoming" class="text-white/60 text-sm hover:text-white transition-colors">Rehoming</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="font-display font-bold mb-3 text-white/80">Information</p>
+            <ul class="space-y-1.5">
+              <li><a href="/2429/prices" class="text-white/60 text-sm hover:text-white transition-colors">Prices</a></li>
+              <li><a href="/2429/gallery" class="text-white/60 text-sm hover:text-white transition-colors">Gallery</a></li>
+              <li><a href="/2429/team" class="text-white/60 text-sm hover:text-white transition-colors">Our Team</a></li>
+              <li><a href="/2429/faq" class="text-white/60 text-sm hover:text-white transition-colors">FAQ</a></li>
+              <li><a href="/2429/testimonials" class="text-white/60 text-sm hover:text-white transition-colors">Testimonials</a></li>
+              <li><a href="/2429/contact" class="text-white/60 text-sm hover:text-white transition-colors">Contact Us</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="font-display font-bold mb-3 text-white/80">More</p>
+            <ul class="space-y-1.5">
+              <li><a href="/2429/dogs-and-litters" class="text-white/60 text-sm hover:text-white transition-colors">Our Dogs &amp; Litters</a></li>
+              <li><a href="/2429/terms" class="text-white/60 text-sm hover:text-white transition-colors">Terms &amp; Conditions</a></li>
+              <li><a href="https://reedhousekennels.wordpress.com/" target="_blank" rel="noopener" class="text-white/60 text-sm hover:text-white transition-colors">Blog</a></li>
+            </ul>
+            <p class="font-display font-bold mt-6 mb-2 text-white/80 text-sm">Areas we cover</p>
+            <p class="text-white/50 text-xs leading-relaxed">Warrington, Lymm, Altrincham, Sale, Hale, Bowdon, Trafford, Rixton, Partington, Irlam</p>
+          </div>
+        </div>
+        <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p class="text-white/40 text-xs">&copy; 2025 Reed House Kennels. All rights reserved.</p>
+          <p class="text-white/30 text-xs">This is a preview redesign by <a href="https://biscuitweb.co.uk" class="hover:text-white/60 transition-colors">Biscuit Web</a></p>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>

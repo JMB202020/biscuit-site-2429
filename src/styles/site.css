@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400 600 700 800;
+  font-display: swap;
+  src: url('/2429/fonts/inter-latin.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700 800;
+  font-display: swap;
+  src: url('/2429/fonts/nunito-latin.woff2') format('woff2');
+}
+
+/* Reed House Kennels — redesign 2429 */
+
+
+@theme {
+  --color-brand-primary: #025696;
+  --color-brand-accent:  #F0C04E;
+  --color-brand-bg:      #FDFAF4;
+  --color-brand-cream:   #FDF3DC;
+  --color-brand-green:   #2E5C2E;
+  --color-brand-warm:    #7A5C2E;
+  --color-ink:           #1A1A1A;
+  --color-ink-soft:      #4A4A4A;
+  --color-border:        #E8DFC8;
+  --color-white-warm:    #FFFFFF;
+
+  --font-display: 'Nunito', sans-serif;
+  --font-body:    'Inter', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  background: var(--color-brand-bg);
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.font-display { font-family: var(--font-display); }
+.font-body    { font-family: var(--font-body); }
